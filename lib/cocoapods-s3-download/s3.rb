@@ -48,7 +48,6 @@ module Pod
         final_url, _ = presigner.presigned_request(
           :get_object, bucket: bucket, key: key
         )
-        UI.puts final_url
         final_url
       end
 
