@@ -48,3 +48,30 @@ module Pod
 end
 
 #-----------------------------------------------------------------------------#
+
+#-- disable execute_command -------------------------------------------------------#
+
+module Pod
+  module Downloader
+    class Base
+      # Override hook to suppress executables output.
+      #
+      def execute_command(executable, command, raise_on_failure = false)
+        ''
+      end
+
+      def ui_action(_)
+        yield
+      end
+
+      def ui_sub_action(_)
+        yield
+      end
+
+      def ui_message(_)
+      end
+    end
+  end
+end
+
+#-----------------------------------------------------------------------------#

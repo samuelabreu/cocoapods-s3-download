@@ -1,1 +1,1 @@
-require 'cocoapods-s3-download/command'
+require 'cocoapods-s3-download/cocoapods-downloader'
